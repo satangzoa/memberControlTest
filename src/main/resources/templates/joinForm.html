@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <h2>회원가입</h2>
+   <hr>
+   <form action="joinOk" method="get" role="form" th:object="${memberDto}" > <!-- control에서 넘겨받은 memberDto 25행 -->
+   	아이디 : <input type="text" th:field="*{mid}"><br>
+   	비밀번호 : <input type="password" th:field="*{mpw}"><br>
+   	이름 : <input type="text" th:field="*{mname}"><br>
+   	이메일 : <input type="text" th:field="*{memail}"><br>
+   	<input type="submit" value="회원가입">
+   
+   </form>
+</body>
+</html>
